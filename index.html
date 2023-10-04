@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Анкета</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="main-screen">
+        <div class="form">
+            <div class="title">Расскажи о себе</div>
+            <div class="questions">
+                <div class="question">
+                    <div class="question-name">Основные данные</div>
+                    <div class="question-data">
+                        <input type="text" id="last-name" placeholder="Фамилия">
+                        <input type="text" id="name" placeholder="Имя">
+                        <input type="text" id="middle-name" placeholder="Отчество">
+                    </div>
+                </div>
+                <div class="question">
+                    <div class="question-name" for="agree">Дата рождения</div>
+                    <input type="date" id="date-of-birth" placeholder="дд.мм.гггг">
+                </div>
+                <div class="question">
+                    <div class="question-name">Пол</div>
+                    <div class="question-data">
+                        <input type="radio" id="female" name="gender" value="Женщина">
+                        <label for="female">Женщина</label>
+                        <input type="radio" id="male" name="gender" value="Мужчина">
+                        <label for="male">Мужчина</label>
+                    </div>
+                </div>
+                <div class="question">
+                    <div class="question-name">Прочие характеристики</div>
+                    <div class="question-data">
+                        <input type="text" id="height" placeholder="Рост" onkeypress='validate(event)'>
+                        <input type="text" id="weight" placeholder="Вес" onkeypress='validate(event)'>
+                    </div>
+                </div>
+                <div class="question">
+                    <div class="question-name" for="agree">Цвет глаз</div>
+                    <input type="color" id="color-of-eyes" placeholder="Цвет глаз">
+                </div>
+                <div class="question">
+                    <div class="question-name">Правая рука</div>
+                    <div class="question-data">
+                        <input type="radio" id="right-hand-true" name="right-hand" value="true">
+                        <label for="right-hand-true">Есть</label>
+                        <input type="radio" id="right-hand-false" name="right-hand" value="false">
+                        <label for="right-hand-false">Нет</label>
+                    </div>
+                </div>
+                <div class="question">
+                    <div class="question-name">Левая рука</div>
+                    <div class="question-data">
+                        <input type="radio" id="left-hand-true" name="left-hand" value="true">
+                        <label for="left-hand-true">Есть</label>
+                        <input type="radio" id="left-hand-false" name="left-hand" value="false">
+                        <label for="left-hand-false">Нет</label>
+                    </div>
+                </div>
+                <div class="question">
+                    <div class="question-name">Голова</div>
+                    <div class="question-data">
+                        <input type="radio" id="head-true" name="head" value="true">
+                        <label for="head-true">Есть</label>
+                        <input type="radio" id="head-false" name="head" value="false">
+                        <label for="head-false">Нет</label>
+                    </div>
+                </div>
+                <div class="question">
+                    <div class="question-name">Правая нога</div>
+                    <div class="question-data">
+                        <input type="radio" id="right-leg-true" name="right-leg" value="true">
+                        <label for="right-leg-true">Есть</label>
+                        <input type="radio" id="right-leg-false" name="right-leg" value="false">
+                        <label for="right-leg-false">Нет</label>
+                    </div>
+                </div>
+                <div class="question">
+                    <div class="question-name">Левая нога</div>
+                    <div class="question-data">
+                        <input type="radio" id="left-leg-true" name="left-leg" value="true">
+                        <label for="left-leg-true">Есть</label>
+                        <input type="radio" id="left-leg-false" name="left-leg" value="false">
+                        <label for="left-leg-false">Нет</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-result">
+            <div class="top-container">
+                <div class="title">Анкета</div>
+                <div class="name-result">Фамилия Имя Отчество</div>
+                <div class="date-of-birth-result">дд/мм/гггг</div>
+            </div>
+            <div class="person">
+                <img class="right-hand" src="i/right-hand.svg">
+                <img class="left-hand" src="i/left-hand.svg">
+                <img class="right-leg" src="i/right-leg.svg">
+                <img class="left-leg" src="i/left-leg.svg">
+                <img class="head" src="i/head.svg">
+                <img class="body" src="i/body.svg">
+            </div>
+            <div class="height-arrow-container">
+                <img class="height-arrow" src="i/arrow.svg">
+                <div class="characteristic height-result">Рост</div>
+            </div>
+            <div class="bottom-container">
+                <div class="characteristic weight-result">Вес</div>
+                <div class="characteristic gender-result">Пол</div>
+                <div class="characteristic color-of-eyes-result">Цвет глаз
+                    <div class="color-of-eyes-figure"></div>
+                </div>
+                <div class="characteristic full-body">Есть все конечности!</div>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
